@@ -1,0 +1,32 @@
+.menu-container {
+    position: fixed;
+    width: 20rem;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    overflow: auto;
+    transition: 1s all ease-in;
+}
+
+.menu-container::-webkit-scrollbar {
+    display: none;
+}
+.cancal-sidebar-icon {
+    position: absolute;
+    right: -11px;
+    top: -2.2rem;
+}
+
+.notification-card {
+    background-color: var(--bs-body-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    width: 20rem;
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+    z-index: 99;
+}
