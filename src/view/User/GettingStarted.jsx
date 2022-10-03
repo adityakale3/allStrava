@@ -22,8 +22,7 @@ const GettingStarted = () => {
     <div className="slider-container">
       <Splide
         aria-label="My Favorite Images"
-        style={{ height: "100vh", padding: "0" }}
-      >
+        style={{ height: "100vh", padding: "0" }}>
         <SplideSlide>
           <div className=" text-center d-flex justify-content-center">
             <div className="content mt-n5" style={{ maxWidth: "320px" }}>
@@ -106,12 +105,12 @@ const GettingStarted = () => {
           </div>
         </SplideSlide>
       </Splide>
-      <div className="cover-button-bottom d-flex justify-content-center align-items-center">
+      <div className="cover-button-bottom d-flex justify-content-center align-items-center color-white">
         <div>
           <Link
             to="/signup"
-            className="btn scale-box btn-m btn-center-l rounded-l shadow-xl bg-turmaric font-800 text-uppercase py-2"
-          >
+            style={{ color: "white" }}
+            className="btn scale-box btn-m btn-center-l rounded-l shadow-xl bg-turmaric color-white font-800 text-uppercase py-2">
             Get Started
           </Link>
         </div>

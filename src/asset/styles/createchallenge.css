@@ -19,7 +19,6 @@
   outline: none;
   padding: 0.8rem;
   border-radius: 0.7rem;
-  z-index: 2;
 }
 
 input::-webkit-outer-spin-button,
@@ -50,12 +49,4 @@ input[type="number"] {
 
 .premium-text {
   z-index: 2;
-}
-
-.faq-style {
-  background-image: url("../images/pictures/27t.jpg");
-  height: 18rem;
-  background-position: center center;
-  background-size: cover;
-  border-radius: 1rem;
 }

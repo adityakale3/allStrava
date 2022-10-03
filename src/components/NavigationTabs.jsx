@@ -16,8 +16,8 @@ const NavigationTabs = () => {
         onClick={() => setActive("#home")}
         className={
           active == "#home"
-            ? "active-nav flex-1 footer-tab bg-skyblue text-black"
-            : "flex-1 bg-turmaric text-black"
+            ? "active-nav flex-1 footer-tab bg-turmaric text-white"
+            : "flex-1 bg-turmaric text-white"
         }>
         <ImHome className="footer-icon" />
         <span>Home</span>
@@ -27,8 +27,8 @@ const NavigationTabs = () => {
         onClick={() => setActive("#challenge")}
         className={
           active == "#challenge"
-            ? "active-nav flex-1 footer-tab bg-skyblue text-black"
-            : "bg-turmaric flex-1 text-black"
+            ? "active-nav flex-1 footer-tab bg-turmaric text-white"
+            : "bg-turmaric flex-1 text-white"
         }>
         <HiPlus className="footer-icon" />
         <span>Create Challenge</span>
@@ -39,8 +39,8 @@ const NavigationTabs = () => {
         onClick={() => setActive("#profile")}
         className={
           active == "#profile"
-            ? "active-nav flex-1 footer-tab bg-skyblue text-black"
-            : "flex-1 bg-turmaric text-black"
+            ? "active-nav flex-1 footer-tab bg-turmaric text-white"
+            : "flex-1 bg-turmaric text-white"
         }>
         <CgProfile className="footer-icon" />
         <span>You</span>

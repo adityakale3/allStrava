@@ -24,7 +24,7 @@ apiClient.interceptors.request.use(
     return Promise.reject(err);
   }
 );
-
+console.log("URL :::", env.REACT_APP_WEB_URL);
 apiClient.interceptors.response.use(
   (response) => {
     console.log("response.status ::::", response.status, response.data);
@@ -43,8 +43,7 @@ apiClient.interceptors.response.use(
       response.data.stravaLinked != undefined
     ) {
       toast.error("User is stravaLinked ☠️");
-      document.location.href =
-        "http://www.strava.com/oauth/authorize?client_id=90770&response_type=code&redirect_uri=http://localhost:3000/exchange_token&approval_prompt=force&scope=read,read_all,profile:read_all,activity:read,activity:read_all";
+      document.location.href = `http://www.strava.com/oauth/authorize?client_id=${env.REACT_APP_STRAVA_CLIENT_ID}&response_type=code&redirect_uri=${env.REACT_APP_WEB_URL}/exchange_token&approval_prompt=force&scope=read,read_all,profile:read_all,activity:read,activity:read_all`;
       // document.location.href = "/?msg=Link strava";
     }
 
@@ -53,7 +52,8 @@ apiClient.interceptors.response.use(
       response.data.onBoardingQue != undefined
     ) {
       toast.error("User is Profile Completion is Pending ☠️");
-      document.location.href = "http://localhost:3000/qna";
+      console.log("REDIRECT URL :::::::", `${env.REACT_APP_WEB_URL}/qna`);
+      window.location = `${env.REACT_APP_WEB_URL}/qna`;
       // document.location.href = "/?msg=Link strava";
     }
 
@@ -74,7 +74,7 @@ apiClient.interceptors.response.use(
       "response.status :::: ERROR :::",
       error.response.data.msg,
       error.response.status,
-      error.response.data
+      error.response
     );
 
     if (

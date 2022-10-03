@@ -18,12 +18,16 @@ const Login = () => {
       if (validator.isEmail(formData.email)) {
         try {
           const data = await apiClient.post("/login", formData);
-          console.log("RESPONSE ::::", data.data);
-          toast.success(" Logged in successfully");
-          setTimeout(() => {
-            navigate("/home");
-            // history("/home");
-          }, 3000);
+          console.log("RESPONSE Login::::", data.data.onBoardingQue);
+          if (!data.data.onBoardingQue) {
+            navigate("/qna");
+          } else {
+            toast.success(" Logged in successfully");
+            setTimeout(() => {
+              navigate("/home");
+              // history("/home");
+            }, 3000);
+          }
         } catch (error) {
           console.log(error);
         }

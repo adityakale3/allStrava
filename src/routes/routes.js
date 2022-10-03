@@ -4,6 +4,7 @@ export const GettingStarted = React.lazy(() =>
   import("../view/User/GettingStarted")
 );
 export const Login = React.lazy(() => import("../view/User/Login"));
+export const Test = React.lazy(() => import("../view/testalgo"));
 export const Dashboard = React.lazy(() => import("../view/Dashboard/Home"));
 export const NavigateTabs = React.lazy(() =>
   import("../components/NavigationTabs")
@@ -24,6 +25,3 @@ export const StravaGetCode = React.lazy(() =>
 );
 export const QNA = React.lazy(() => import("../view/Qna"));
 export const Verify = React.lazy(() => import("../view/Verify"));
-export const Wallet = React.lazy(() => import("../view/Wallet"));
-
-export const FAQ = React.lazy(() => import("../view/FAQ"));

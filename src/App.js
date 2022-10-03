@@ -10,6 +10,7 @@ import {
   StravaGetCode,
   QNA,
   Verify,
+  Test,
 } from "./routes/routes";
 import Loader from "./components/Loader";
 import { ToastContainer } from "react-toastify";
@@ -22,6 +23,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<GettingStarted />} exact={true} />
+          <Route path="/test" element={<Test />} exact={true} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/exchange_token" element={<StravaGetCode />} />

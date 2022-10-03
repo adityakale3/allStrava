@@ -7,7 +7,9 @@ const Header = () => {
 
   return (
     <div>
-      <div className="d-flex justify-content-between w-100 p-3 font-600">
+      <div
+        className="d-flex justify-content-between w-100 p-3 font-600 color-white"
+        style={{ color: "white" }}>
         <span>
           <AiOutlineArrowLeft />
         </span>

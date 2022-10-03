@@ -7,9 +7,7 @@ import {
   CreateChallenge,
   Milestones,
   Profile,
-  FAQ,
   You,
-  Wallet,
 } from "../routes/routes";
 
 const ContentBox = () => {
@@ -20,9 +18,7 @@ const ContentBox = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/create-challenge" element={<CreateChallenge />} />
-          <Route path="/wallet" element={<Wallet />} />
           <Route path="/you" element={<You />} />
-          <Route path="/faq" element={<FAQ />} />
           {/* <Route path="/milestones" element={<Milestones />} /> */}
         </Routes>
       </Suspense>
