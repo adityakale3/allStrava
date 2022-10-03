@@ -125,14 +125,14 @@
 }
 
 .bg-turmaric {
-  background-color: #ed980c !important;
+  background-color: #285598 !important;
 }
 .text-turmaric {
-  color: #ed980c !important;
+  color: #285598 !important;
 }
 
 .bg-red-dark {
-  background-color: #da4453 !important;
+  background-color: #285598 !important;
   color: #fff !important;
 }
 .bg-green-light {
@@ -148,27 +148,27 @@
   color: #fff !important;
 }
 .color-green-dark {
-  color: #8cc152 !important;
+  color: #dfc102 !important;
 }
 .color-icon-green {
-  stroke: #8cc152 !important;
+  stroke: #dfc102 !important;
   fill: rgba(140, 193, 82, 0.3) !important;
 }
 .bg-green-dark {
-  background-color: #8cc152 !important;
+  background-color: #dfc102 !important;
   color: #fff !important;
 }
 .border-green-light {
   border-color: #a0d468 !important;
 }
 .border-green-dark {
-  border-color: #8cc152 !important;
+  border-color: #dfc102 !important;
 }
 .focus-green:focus {
-  border-color: #8cc152 !important;
+  border-color: #dfc102 !important;
 }
 .gradient-green {
-  background-image: linear-gradient(to bottom, #a0d468, #8cc152);
+  background-image: linear-gradient(to bottom, #a0d468, #dfc102);
 }
 .color-grass-light {
   color: #34cc73 !important;
@@ -216,13 +216,13 @@
   border-color: #ed5565 !important;
 }
 .border-red-dark {
-  border-color: #da4453 !important;
+  border-color: #285598 !important;
 }
 .focus-red:focus {
-  border-color: #da4453 !important;
+  border-color: #285598 !important;
 }
 .gradient-red {
-  background-image: linear-gradient(to bottom, #ed5565, #da4453);
+  background-image: linear-gradient(to bottom, #ed5565, #285598);
 }
 
 .color-yellow-light {
@@ -233,7 +233,7 @@
 }
 
 .color-highlight {
-  color: #da4453 !important;
+  color: #285598 !important;
 }
 
 .bg-fade-gray-light {
@@ -268,7 +268,7 @@
 }
 
 .bg-highlight {
-  background-color: #da4453 !important;
+  background-color: #285598 !important;
   color: #fff !important;
 }
 

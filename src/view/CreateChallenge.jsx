@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { TbCurrencyRupee } from "react-icons/tb";
 import { BsFillTrophyFill } from "react-icons/bs";
 import { FaRoad } from "react-icons/fa";
@@ -8,13 +8,15 @@ import { toast } from "react-toastify";
 import apiClient from "../services/api";
 
 const CreateChallenge = () => {
-  const [active, setActive] = useState(false);
+  const navigate = useNavigate();
+  const [refSpeed, setRefSpeed] = useState();
   const [amountToBet, setAmountToBet] = useState();
   const [minDistance, setminDistance] = useState(1);
   const [estDistance, setestDistance] = useState(1);
   const [winAmount, setwinAmount] = useState(1);
-  const [currentRm, setcurrentRm] = useState(1.25);
+  const [currentRm, setcurrentRm] = useState(1.1);
   const [offers, setOffers] = useState([]);
+  const [isFirst, setisFirst] = useState(false);
   const [offerSelected, setOfferSelected] = useState({ amount: 0 });
   const [buttonText, setButtonText] = useState("Buy Multipler");
   const [display, setdisplay] = useState(false);
@@ -45,6 +47,24 @@ const CreateChallenge = () => {
     setOfferSelected(name);
     setButtonText("Offer Applied - " + name.offerName);
   };
+
+  useEffect(() => {
+    apiClient
+      .get("/fetchRM", {
+        amountBetted: amountToBet,
+        offerApplied: 0,
+        distanceEstimated: estDistance,
+      })
+      .then((data) => {
+        console.log("RM ::::::::::");
+        setRefSpeed(data.data.data.activeRefSpeed);
+        setcurrentRm(data.data.data.activeRM);
+      })
+      .catch((error) => {
+        console.error("User error ::iii::", error);
+        setdisplay(true);
+      });
+  }, []);
 
   useEffect(() => {
     setTotalAmount(Number(amountToBet) + Number(offerSelected.amount));
@@ -102,14 +122,14 @@ const CreateChallenge = () => {
         offerApplied: 0,
         distanceEstimated: estDistance,
       });
-      console.log("User Resp ::::", data.data.data);
+      // console.log("User Resp ::::", data.data.data.userDetails);
       let orderId = data.data.data.id;
       makePayments(
         orderId,
         Number(data.data.data.finalAmount * 100),
-        "Aditya",
+        `${data.data.data.userDetails.firstName} ${data.data.data.userDetails.lastName}`,
         data.data.data.email,
-        "9623124231"
+        data.data.data.userDetails.phone
       );
     } catch (error) {
       console.error("User error ::iii::", error);
@@ -127,8 +147,9 @@ const CreateChallenge = () => {
     apiClient
       .get("/offers")
       .then((data) => {
-        console.log("OFFERS ::::", data.data.data);
-        setOffers(data.data.data);
+        console.log("OFFERS ::::", data.data.data.isFirstMatch);
+        setOffers(data.data.data[0]);
+        setisFirst(data.data.data.isFirstMatch);
       })
       .catch((error) => {
         console.error("User error ::iii::", error);
@@ -177,10 +198,18 @@ const CreateChallenge = () => {
             style={{ fontSize: "60px", marginTop: "2rem" }}>
             {currentRm}x
           </h1>
-          <span className="font-5">Current Challenge Multipler</span>
-          <div className=" mb-4 rounded-m">
+          <span className="font-5">Current Challenge Multipler</span> <br />
+          <span className="font-5">
+            {refSpeed
+              ? `Min Speed to win this challenge : ${refSpeed} min/km`
+              : null}
+          </span>
+          <div
+            className=" mb-4 rounded-m"
+            style={{ display: isFirst ? "none" : "block" }}>
             <br />
             <button
+              disabled={isFirst}
               onClick={() => {
                 setWinningPopup(!winningPopup);
                 setButtonText("Buy Multipler");
@@ -304,7 +333,13 @@ const CreateChallenge = () => {
 
                 <button
                   className="btn btn-sm rounded-s shadow-l bg-turmaric text-white px-5 btn-center-m text-uppercase font-900"
-                  onClick={() => setWinningPopup(false)}>
+                  onClick={() => {
+                    setWinningPopup(false);
+                    setTimeout(() => {
+                      navigate("/home");
+                      // history("/home");
+                    }, 3000);
+                  }}>
                   Continue
                 </button>
               </div>
@@ -323,7 +358,10 @@ const CreateChallenge = () => {
                 <p>Start Activity in Strava</p>
                 <button
                   className="btn btn-sm rounded-s shadow-l bg-turmaric text-white px-5 btn-center-m text-uppercase font-900"
-                  onClick={() => setPaymentPopup(false)}>
+                  onClick={() => {
+                    setPaymentPopup(false);
+                    navigate("/home");
+                  }}>
                   Continue
                 </button>
               </div>

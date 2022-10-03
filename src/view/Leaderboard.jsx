@@ -47,16 +47,6 @@ const Leaderboard = () => {
 
   return (
     <div className="home-container">
-      <div className="d-flex px-2 pb-4">
-        <div className="ms-auto align-self-center">
-          <Link
-            to="/create-challenge"
-            className="btn btn-sm bg-blue-dark text-uppercase font-700 rounded-sm"
-          >
-            Create Now
-          </Link>
-        </div>
-      </div>
       <div className="morning-activity-card mx-1 px-4 py-3 ">
         <div className="d-flex">
           <div className="align-self-center">
@@ -66,8 +56,7 @@ const Leaderboard = () => {
             <div className="input-style has-borders no-icon mb-4 position-relative">
               <div
                 className="d-flex justify-space-between select-value"
-                onClick={() => setOpen(!open)}
-              >
+                onClick={() => setOpen(!open)}>
                 <b>{name}</b>
                 <MdOutlineKeyboardArrowDown />
               </div>
@@ -78,8 +67,7 @@ const Leaderboard = () => {
                     onClick={() => {
                       setOpen(false);
                       setName("City");
-                    }}
-                  >
+                    }}>
                     <b>City</b>
                   </div>
                   <div
@@ -87,8 +75,7 @@ const Leaderboard = () => {
                     onClick={() => {
                       setOpen(false);
                       setName("State");
-                    }}
-                  >
+                    }}>
                     <b>State</b>
                   </div>
                 </div>
@@ -122,8 +109,7 @@ const Leaderboard = () => {
                     <h1
                       className={`pe-3 font-40 font-900  ${
                         !!item.isActive ? "opacity-100" : "opacity-25"
-                      }`}
-                    >
+                      }`}>
                       {item.Rank}
                     </h1>
                   </div>

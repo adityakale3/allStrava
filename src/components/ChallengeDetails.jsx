@@ -4,7 +4,7 @@ import { TbCurrencyRupee } from "react-icons/tb";
 import { BsFillTrophyFill } from "react-icons/bs";
 import { FaTachometerAlt } from "react-icons/fa";
 
-const ChallengeDetails = (props: any) => {
+const ChallengeDetails = (props) => {
   return (
     <div id="menu-expense-1" className="menu rounded-m">
       <div className="d-flex justify-content-between align-items-center">
@@ -14,8 +14,7 @@ const ChallengeDetails = (props: any) => {
         <span
           className="font-28 color-red-light"
           onClick={() => props.setElement(false)}
-          style={{ cursor: "pointer" }}
-        >
+          style={{ cursor: "pointer" }}>
           <MdOutlineClose />
         </span>
       </div>

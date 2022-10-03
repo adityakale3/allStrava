@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: grey;
+  color: white !important;
   font-weight: 500;
   padding: 1rem 0;
 }
@@ -31,7 +31,7 @@
 
 .footer-tab .active-nav .footer-icon,
 .footer-tab .active-nav span {
-  background-color: var(--bg-turmaric);
-  color: black !important;
-  background-color: aqua;
+  background-color: var(#DFC102);
+  color: white !important;
+  background-color: #DFC102;
 }

@@ -30,7 +30,7 @@
   padding: 0.6rem 1.5rem;
   border-radius: 0.6rem;
   border: none;
-  background-color: #da4453;
+  background-color: #285598;
 }
 
 .card-top-button > a {
@@ -61,7 +61,7 @@
 }
 
 .tab-controls > .active {
-  color: #da4453;
+  color: #285598;
 }
 
 .morning-activity-card {

@@ -3,7 +3,7 @@ import { FaAngleRight, FaRunning } from "react-icons/fa";
 import { GiTrophyCup } from "react-icons/gi";
 import { AiOutlineSetting } from "react-icons/ai";
 
-const NotificationPopup = (props: any) => {
+const NotificationPopup = (props) => {
   return (
     <div>
       {props.active ? (
@@ -14,8 +14,7 @@ const NotificationPopup = (props: any) => {
           <div className="divider divider-margins my-2"></div>
           <div
             className="d-flex justify-content-between align-items-center my-2 cursor-pointer"
-            onClick={() => props.closenotification(false)}
-          >
+            onClick={() => props.closenotification(false)}>
             <span className="d-flex align-items-center">
               <GiTrophyCup className="mx-2 font-20 text-skyblue" />
               <span className="font-14 font-300">New offer Get RM UpTo 2x</span>
@@ -25,8 +24,7 @@ const NotificationPopup = (props: any) => {
           <div className="divider divider-margins my-2"></div>
           <div
             className="d-flex justify-content-between align-items-center my-2 cursor-pointer"
-            onClick={() => props.closenotification(false)}
-          >
+            onClick={() => props.closenotification(false)}>
             <span className="d-flex align-items-center">
               <AiOutlineSetting className="mx-2 font-20" />
               <span className="font-14 font-300">
