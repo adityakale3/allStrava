@@ -1,0 +1,197 @@
+.card-center {
+  z-index: 2;
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-style {
+  position: relative;
+  margin-bottom: 15px !important;
+}
+.input-style input,
+.input-style select,
+.input-style textarea {
+  font-size: 12px;
+  width: 100%;
+  line-height: 45px;
+  height: 45px;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+  padding: 0;
+  border-radius: 0;
+}
+.input-style select,
+.input-style select option,
+.input-style select option:disabled {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+.input-style label {
+  opacity: 0;
+  left: 0 !important;
+  transform: translateX(30px);
+  position: absolute;
+  top: -12px;
+  height: 10px;
+  font-size: 10px;
+  transition: all 150ms ease;
+  background-color: #fff;
+}
+.input-style-active label {
+  opacity: 1;
+  transform: none !important;
+}
+.input-style.has-icon i:first-child {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  text-align: center;
+  margin-top: -8px;
+}
+.input-style.has-icon.has-borders i:first-child {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  padding-left: 15px !important;
+  text-align: center;
+  margin-top: -7px;
+}
+.input-style.has-icon.has-borders input,
+.input-style.has-icon.has-borders select,
+.input-style.has-icon.has-borders textarea {
+  padding-left: 35px !important;
+}
+.input-style.has-icon input,
+.input-style.has-icon select,
+.input-style.has-icon textarea {
+  padding-left: 25px;
+}
+.input-style input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.3;
+}
+.input-style textarea {
+  line-height: 20px !important;
+  padding-top: 15px !important;
+  transition: all 250ms ease !important;
+}
+.input-style select {
+  color: inherit;
+}
+.input-style input[type="date"] {
+  color: inherit;
+  width: calc(100vw - 64px);
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-top: 2px;
+}
+.input-style .invalid,
+.input-style .valid,
+.input-style em,
+.input-style span {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 5px;
+  pointer-events: none;
+}
+.input-style em,
+.input-style span {
+  margin-top: -12px;
+  font-size: 10px;
+  font-style: normal;
+  opacity: 0.3;
+}
+.input-style.has-borders input,
+.input-style.has-borders select,
+.input-style.has-borders textarea {
+  height: 53px;
+  border-left-width: 1px !important;
+  border-right-width: 1px !important;
+  border-top-width: 1px !important;
+  padding-left: 13px !important;
+  padding-right: 10px !important;
+  border-radius: 10px !important;
+}
+.input-style.has-borders .invalid,
+.input-style.has-borders .valid,
+.input-style.has-borders em,
+.input-style.has-borders span {
+  margin-right: 10px;
+}
+.input-style.input-style-active label {
+  left: 4px !important;
+  transform: translateX(-14px) !important;
+  position: absolute;
+  padding: 0 8px !important;
+  height: 23px;
+  font-size: 12px;
+  transition: all 250ms ease;
+  background-color: #fff;
+}
+.input-style.has-borders.input-style-active label {
+  margin-left: 14px !important;
+}
+.input-style textarea:focus {
+  height: 150px;
+  transition: all 250ms ease !important;
+}
+.input-style.no-borders.input-style-always-active label {
+  opacity: 1;
+  left: 6px !important;
+  transform: translateX(-14px) !important;
+  margin-left: 0 !important;
+  position: absolute;
+  padding: 0 8px !important;
+  height: 23px;
+  font-size: 12px;
+  transition: all 250ms ease;
+  background-color: #fff;
+}
+.input-style.has-borders.input-style-always-active label {
+  opacity: 1;
+  left: 23px !important;
+  transform: translateX(-14px) !important;
+  margin-left: 0 !important;
+  position: absolute;
+  padding: 0 5px !important;
+  height: 23px;
+  font-size: 12px;
+  transition: all 250ms ease;
+  background-color: #fff;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input-transparent * {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+.input-transparent.no-borders input {
+  border-bottom-width: 1px !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.signup-icon {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  text-align: center;
+  margin-top: -8px;
+  font-size: 15px;
+}
+
+.form-control {
+  background: #f0f0f0 !important;
+}

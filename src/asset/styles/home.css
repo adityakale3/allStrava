@@ -1,0 +1,125 @@
+.bg-blue-dark {
+  background-color: #4a89dc !important;
+  color: #fff !important;
+}
+
+.card-style {
+  background-image: url("../images/pictures/18w.jpg");
+  height: 14rem;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-top > h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.card-top-button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: #da4453;
+}
+
+.card-top-button > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.tabs-small {
+  line-height: 35px;
+}
+
+.tabs-rounded a:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.tabs-rounded a:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tab-controls {
+  font-family: source sans pro, sans-serif;
+  color: #1f1f1f;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.tab-controls > .active {
+  color: #da4453;
+}
+
+.morning-activity-card {
+  background-color: var(--bs-body-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+}
+
+.morning-activity-card > .card-top {
+  background-image: url("https://img.freepik.com/premium-photo/fitness-girl-runner-running-sportswear-yellow-background_545934-5424.jpg");
+  height: 8rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.card-overlay {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+  background-position: center center;
+  background-size: cover !important;
+}
+
+.winning-popup {
+  text-align: center;
+  padding: 1rem 2rem 1rem 1rem;
+  opacity: 1 !important;
+  transition: all 350ms ease;
+  pointer-events: all !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  background-color: #fff;
+  width: -webkit-fill-available;
+  margin: 1rem 0 1rem 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: var(--box-shadow);
+  width: 23rem;
+  line-height: 2;
+}
+
+.select-value {
+  width: 7rem;
+  background-color: var(--bs-body-bg);
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.select-menu {
+  position: absolute;
+  top: 2rem;
+}

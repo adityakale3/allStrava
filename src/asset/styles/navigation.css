@@ -1,0 +1,37 @@
+.footer-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: var(--box-shadow);
+}
+
+.footer-bar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: grey;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.footer-icon {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.footer-bar > a > span {
+  font-size: 0.8rem;
+}
+
+.footer-tab .active-nav .footer-icon,
+.footer-tab .active-nav span {
+  background-color: var(--bg-turmaric);
+  color: black !important;
+  background-color: aqua;
+}

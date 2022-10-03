@@ -1,0 +1,61 @@
+.input-age-container {
+  background-image: url("../images/pictures/14.jpg");
+  height: 10rem;
+  background-position: center;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.input-age-box {
+  display: grid;
+  width: -webkit-fill-available !important;
+  padding: 1.5rem;
+}
+
+.input-age-box > input {
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  z-index: 2;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-age-icon {
+  position: absolute;
+  top: 4.5rem;
+  right: 2rem;
+  color: grey;
+}
+
+.premium-style {
+  background-image: url("../images/pictures/14.jpg");
+  height: 18rem;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.premium-text {
+  z-index: 2;
+}
+
+.faq-style {
+  background-image: url("../images/pictures/27t.jpg");
+  height: 18rem;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+}
